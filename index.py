@@ -12,7 +12,7 @@ import dash_bootstrap_components as dbc
 
 from app import app
 # import all pages in the app
-from apps import bedrooms, home, Stories,Furnish,Area,services,Facilities
+from apps import bedrooms, home, Stories,Furnish,Area,services,Facilities,Feedback
 
 # building the navigation bar
 # https://github.com/facultyai/dash-bootstrap-components/blob/master/examples/advanced-component-usage/Navbars.py
@@ -24,7 +24,8 @@ dropdown = dbc.DropdownMenu(
         dbc.DropdownMenuItem("Furnish",href="/furnish"),
         dbc.DropdownMenuItem("Area",href="/area"),
         dbc.DropdownMenuItem("Services",href="/services"),
-        dbc.DropdownMenuItem("Facilities",href="/facilities")
+        dbc.DropdownMenuItem("Facilities",href="/facilities"),
+        dbc.DropdownMenuItem("Feedback",href="/feedback")
         
   
     ],
@@ -100,6 +101,8 @@ def display_page(pathname):
         return services.layout
     elif pathname == '/facilities':
         return Facilities.layout
+         elif pathname == '/feedback':
+        return Feedback.layout
     else:
         return html.Div("404 - Page not found")
 
