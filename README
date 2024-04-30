@@ -1,5 +1,5 @@
 How to deploy the app:
-1-download all the files.
+1-download all the folders and files(assets,apps,app.py,index.py).
 2- use any python console to run the index.py file.
 3- you should be able to access the dash app on the local host of you device using the link 127.0.0.1:8099
 
